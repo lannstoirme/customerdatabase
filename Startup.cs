@@ -140,8 +140,8 @@ namespace MicahCustomerManager
             }
 
             // Get these value from "appsettings.json" file.
-            string adminUserEmail = "Miakke77@gmail.com";
-            string adminPwd = "Manifest@77";
+            string adminUserEmail = $ADMIN_USERNAME;
+            string adminPwd = $ADMIN_PWD;
             AddUserToRole(serviceProvider, adminUserEmail, adminPwd, adminRoleName);
         }
 
