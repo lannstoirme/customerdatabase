@@ -32,12 +32,12 @@ jobs:
           path: .\bin\Release\netcoreapp3.1\win10-x64\publish\micahcustomermanager.exe
 
       #build image
-      - run: |
-        docker info
+      - run: 
+        docker info:
         docker build -t micahcmapp -f Dockerfile .
 
       #deploy the image
-      - run: |
+      - run: 
         docker login --username=veronicalswoodward@gmail.com --password=938b0922-e336-4a58-b09f-c7ecaf689c47
         docker tag micahcmapp registry.heroku.com/micahcustomermanager/web
         docker push registry.heroku.com/micahcustomermanager/web
