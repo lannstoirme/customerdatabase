@@ -1,0 +1,149 @@
+@page
+@model MicahCustomerManager.Pages.Customers.EditModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Customer.Id" />
+            <div class="form-group">
+                <label asp-for="Customer.LastName" class="control-label"></label>
+                <input asp-for="Customer.LastName" class="form-control" />
+                <span asp-validation-for="Customer.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.FirstName" class="control-label"></label>
+                <input asp-for="Customer.FirstName" class="form-control" />
+                <span asp-validation-for="Customer.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.DateOfBirth" class="control-label"></label>
+                <input asp-for="Customer.DateOfBirth" class="form-control" />
+                <span asp-validation-for="Customer.DateOfBirth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.MobileNumber" class="control-label"></label>
+                <input asp-for="Customer.MobileNumber" class="form-control" />
+                <span asp-validation-for="Customer.MobileNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.EmailAddress" class="control-label"></label>
+                <input asp-for="Customer.EmailAddress" class="form-control" />
+                <span asp-validation-for="Customer.EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.PostalAddress" class="control-label"></label>
+                <input asp-for="Customer.PostalAddress" class="form-control" />
+                <span asp-validation-for="Customer.PostalAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ProceduresPerformed" class="control-label"></label>
+                <input asp-for="Customer.ProceduresPerformed" class="form-control" />
+                <span asp-validation-for="Customer.ProceduresPerformed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ProcedureDescription" class="control-label"></label>
+                <input asp-for="Customer.ProcedureDescription" class="form-control" />
+                <span asp-validation-for="Customer.ProcedureDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ProcedureDate1" class="control-label"></label>
+                <input asp-for="Customer.ProcedureDate1" class="form-control" />
+                <span asp-validation-for="Customer.ProcedureDate1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ProcedureDate2" class="control-label"></label>
+                <input asp-for="Customer.ProcedureDate2" class="form-control" />
+                <span asp-validation-for="Customer.ProcedureDate2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.AdditionalProceduresDates" class="control-label"></label>
+                <input asp-for="Customer.AdditionalProceduresDates" class="form-control" />
+                <span asp-validation-for="Customer.AdditionalProceduresDates" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.AllergiesNoted" class="control-label"></label>
+                <input asp-for="Customer.AllergiesNoted" class="form-control" />
+                <span asp-validation-for="Customer.AllergiesNoted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.MedicalNotes" class="control-label"></label>
+                <input asp-for="Customer.MedicalNotes" class="form-control" />
+                <span asp-validation-for="Customer.MedicalNotes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.PreviousMedicalComplications" class="control-label"></label>
+                <input asp-for="Customer.PreviousMedicalComplications" class="form-control" />
+                <span asp-validation-for="Customer.PreviousMedicalComplications" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Customer.AntiobioticProcedureNeeded" /> @Html.DisplayNameFor(model => model.Customer.AntiobioticProcedureNeeded)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ProcedureNotes" class="control-label"></label>
+                <input asp-for="Customer.ProcedureNotes" class="form-control" />
+                <span asp-validation-for="Customer.ProcedureNotes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ConsentGiven" class="control-label"></label>
+                <input asp-for="Customer.ConsentGiven" class="form-control" />
+                <span asp-validation-for="Customer.ConsentGiven" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Customer.UnderEighteen" /> @Html.DisplayNameFor(model => model.Customer.UnderEighteen)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Customer.MarketingSubscribed" /> @Html.DisplayNameFor(model => model.Customer.MarketingSubscribed)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Customer.PregnantBreastfeeding" /> @Html.DisplayNameFor(model => model.Customer.PregnantBreastfeeding)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.NotesOnCustomer" class="control-label"></label>
+                <input asp-for="Customer.NotesOnCustomer" class="form-control" />
+                <span asp-validation-for="Customer.NotesOnCustomer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ReferralInformation" class="control-label"></label>
+                <input asp-for="Customer.ReferralInformation" class="form-control" />
+                <span asp-validation-for="Customer.ReferralInformation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

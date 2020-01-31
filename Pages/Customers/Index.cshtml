@@ -1,0 +1,170 @@
+@page
+@model MicahCustomerManager.Pages.Customers.IndexModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].MobileNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].PostalAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].ProceduresPerformed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].ProcedureDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].ProcedureDate1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].ProcedureDate2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].AdditionalProceduresDates)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].AllergiesNoted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].MedicalNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].PreviousMedicalComplications)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].AntiobioticProcedureNeeded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].ProcedureNotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].ConsentGiven)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].UnderEighteen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].MarketingSubscribed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].PregnantBreastfeeding)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].NotesOnCustomer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer[0].ReferralInformation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Customer) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostalAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProceduresPerformed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcedureDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcedureDate1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcedureDate2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdditionalProceduresDates)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AllergiesNoted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicalNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreviousMedicalComplications)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AntiobioticProcedureNeeded)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcedureNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConsentGiven)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnderEighteen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketingSubscribed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PregnantBreastfeeding)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NotesOnCustomer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReferralInformation)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿<Properties StartupConfiguration="{B74EF23C-E08F-4596-922D-BEB817C1A0B2}|Default">
+  <MonoDevelop.Ide.ItemProperties.MicahCustomerManager PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Dockerfile.txt">
+    <Files>
+      <File FileName="Pages/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="Models/Customer.cs" />
+      <File FileName="Data/ApplicationDbContext.cs" />
+      <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" />
+      <File FileName="Pages/Customers/Index.cshtml.cs" />
+      <File FileName="Pages/Customers/Index.cshtml" />
+      <File FileName="Models/Procedure.cs" />
+      <File FileName="Pages/Privacy.cshtml" />
+      <File FileName="Pages/Privacy.cshtml.cs" />
+      <File FileName="Pages/Shared/_LoginPartial.cshtml" />
+      <File FileName="Program.cs" />
+      <File FileName="Pages/Customers/Create.cshtml.cs" />
+      <File FileName="Pages/Customers/Delete.cshtml" />
+      <File FileName="Pages/Customers/Delete.cshtml.cs" />
+      <File FileName="Pages/Customers/Details.cshtml.cs" />
+      <File FileName="Pages/Customers/Edit.cshtml.cs" />
+      <File FileName="Pages/Procedures/Create.cshtml.cs" />
+      <File FileName="Pages/Procedures/Delete.cshtml.cs" />
+      <File FileName="Pages/Procedures/Details.cshtml.cs" />
+      <File FileName="Pages/Procedures/Edit.cshtml.cs" />
+      <File FileName="Pages/Procedures/Index.cshtml.cs" />
+      <File FileName="app.db" />
+      <File FileName="Pages/_ViewImports.cshtml" />
+      <File FileName="Pages/Index.cshtml.cs" />
+      <File FileName="Data/Migrations/00000000000000_CreateIdentitySchema.cs" />
+      <File FileName="Data/Migrations/20200126083429_SecondCreate.cs" />
+      <File FileName="Data/Migrations/20200126083429_SecondCreate.Designer.cs" />
+      <File FileName="Data/Migrations/20200126091343_ThirdCreate.cs" />
+      <File FileName="appsettings.json" />
+      <File FileName=".dockerignore" />
+      <File FileName="Dockerfile" Line="18" Column="50" />
+      <File FileName="Dockerfile.txt" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MicahCustomerManager" expanded="True">
+            <Node name="MicahCustomerManager" expanded="True">
+              <Node name="Dockerfile.txt" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
