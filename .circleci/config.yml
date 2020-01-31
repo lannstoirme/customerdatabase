@@ -1,54 +1,23 @@
-version: 2.0
+
+
+version: 2
 jobs:
-  build: 
-  machine: true
-  steps:
-    -checkout
+ build:
+   machine: true
+   steps:
+     - checkout 
 
-#orbs:
-#  win: circleci/windows@1.0.0
-  
-#jobs: 
-#  build: 
-#    executor:
-#      name: win/vs2019
-#      shell: powershell.exe
-    
-#    steps:
-#      - checkout
-#      - restore_cache:
-#          keys:
-#            - dotnet-packages-v1-{{ checksum "micahcustomermanager.csproj" }}
-#            
-#      - run:
-#          name: "Install project dependencies"
-#          command: dotnet.exe restore
-#      - save_cache:
-#          paths:
-#            - C:\Users\circleci\.nuget\packages
-#          key: dotnet-packages-v1-{{ checksum "micahcustomermanager.csproj" }}
-#      - run:
-#          name: "Run Build step"
-#          command: dotnet.exe publish -c Release -r win10-x64
-#      - run:
-#          name: "Test the executable"
-#          command: .\bin\Release\netcoreapp3.1\win10-x64\publish\micahcustomermanager.exe
-#      - store_artifacts:
-#          path: .\bin\Release\netcoreapp3.1\win10-x64\publish\micahcustomermanager.exe
-
-      #build image
-        - run: |
-            command: docker info
-            command: docker build -t micahcmapp -f Dockerfile .
-
-      #deploy the image
-        - run: |
-            command: docker login --username=$HEROKU_USERNAME --password=$HEROKU_API_KEY registry.heroku.com
-            command: docker tag micahcmapp registry.heroku.com/micahcustomermanager/web
-            command: docker push registry.heroku.com/micahcustomermanager/web
-            command: curl https://cli-assets-heroku.com/install.sh | //cli-assets-heroku.com/install.sh | //cli-assets-heroku.com/install.sh | sh
-            command: heroku container:release web -a micahcustomermanager
-
+     # build image
+     - run: |         
+         docker info
+         docker build -t micahcmapp -f Dockerfile .
+     # deploy the image
+     - run: |         
+         docker login --username=$HEROKU_USERNAME --password=$HEROKU_API_KEY registry.heroku.com
+         docker tag micahcmapp registry.heroku.com/micahcmapp/web
+         docker push registry.heroku.com/micahcmapp/web                
+         curl https://cli-assets.heroku.com/install.sh | sh
+         heroku container:release web -a micahcmapp
 
 
 
