@@ -33,16 +33,16 @@ jobs:
 
       #build image
       - run: 
-        command: docker info
-        command: docker build -t micahcmapp -f Dockerfile .
+          command: docker info
+          command: docker build -t micahcmapp -f Dockerfile .
 
       #deploy the image
       - run: 
-        command: docker login --username=veronicalswoodward@gmail.com --password=938b0922-e336-4a58-b09f-c7ecaf689c47
-        command: docker tag micahcmapp registry.heroku.com/micahcustomermanager/web
-        command: docker push registry.heroku.com/micahcustomermanager/web
-        command: curl https://cli-assets-heroku.com/install.sh | //cli-assets-heroku.com/install.sh | //cli-assets-heroku.com/install.sh | sh
-        command: heroku container:release web -a micahcustomermanager
+          command: docker login --username=veronicalswoodward@gmail.com --password=938b0922-e336-4a58-b09f-c7ecaf689c47
+          command: docker tag micahcmapp registry.heroku.com/micahcustomermanager/web
+          command: docker push registry.heroku.com/micahcustomermanager/web
+          command: curl https://cli-assets-heroku.com/install.sh | //cli-assets-heroku.com/install.sh | //cli-assets-heroku.com/install.sh | sh
+          command: heroku container:release web -a micahcustomermanager
 
 
 
