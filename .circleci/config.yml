@@ -13,7 +13,7 @@ jobs:
          docker build -t micahcmapp -f Dockerfile .
      # deploy the image
      - run: |         
-         docker heroku login --username=$HEROKU_USERNAME --password=$HEROKU_API_KEY registry.heroku.com
+         heroku login --username=$HEROKU_USERNAME --password=$HEROKU_API_KEY registry.heroku.com
          docker tag micahcmapp registry.heroku.com/micahcmapp/web
          docker push registry.heroku.com/micahcmapp/web                
          curl https://cli-assets.heroku.com/install.sh | sh
