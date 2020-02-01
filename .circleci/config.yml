@@ -19,8 +19,10 @@ jobs:
          -H "Authorization: Bearer $HEROKU_API_KEY"
          heroku update
          HEROKU_DEBUG=true HEROKU_DEBUG_HEADERS=1 heroku login
+         cat ~/.netrc
+         heroku auth:token
          docker tag micahcmapp registry.heroku.com/micahcmapp/web
-         docker push registry.heroku.com/micahcmapp/web                
+         docker push registry.heroku.com/micahcmapp/web 
          curl https://cli-assets.heroku.com/install.sh | sh
          heroku container:release web -a micahcmapp
 
